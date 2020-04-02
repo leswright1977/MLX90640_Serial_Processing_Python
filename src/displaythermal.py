@@ -11,8 +11,6 @@ if ser.is_open == False:
 
 nmin = 0
 nmax = 255
-alpha1 = 0.5
-alpha2 = 0.5
 
 frames = 0
 index = 0
@@ -87,12 +85,6 @@ while True:
 	if res == 120: #x
 		nmax -= 10
 		print(nmax)
-	if res == 100: #d
-		alpha1 += 0.1
-		alpha2 -= 0.1
-	if res == 99: #c
-		alpha1 -= 0.1
-		alpha2 += 0.1
 
 
 
