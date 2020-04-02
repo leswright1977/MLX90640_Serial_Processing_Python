@@ -48,8 +48,8 @@ while True:
 
 				index+=1
 
-	heatmap = cv2.rotate(heatmap, cv2.ROTATE_90_COUNTERCLOCKWISE)
-	heatmap = cv2.flip(heatmap, 1 ) #flip heatmap to match image
+	heatmap = cv2.rotate(heatmap, cv2.ROTATE_90_CLOCKWISE)#rotate
+	heatmap = cv2.flip(heatmap, 1 ) #flip heatmap
 	heatmap = cv2.normalize(heatmap,None,nmin,nmax,cv2.NORM_MINMAX)
 	heatmap = cv2.applyColorMap(heatmap, cv2.COLORMAP_JET)
 	heatmap = cv2.resize(heatmap,(240,320),interpolation=cv2.INTER_CUBIC)
