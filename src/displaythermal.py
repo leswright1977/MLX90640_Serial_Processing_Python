@@ -2,7 +2,7 @@ import serial
 import numpy as np
 import cv2
 import math
-
+import time
 
 ser = serial.Serial("/dev/ttyACM0", 115200)
 
@@ -19,6 +19,8 @@ temp = 0
 alpha = -1.3 # Contrast control (1.0-3.0)
 beta = 92 # Brightness control (0-100)
 rad = 2
+
+start = time.time()
 
 while True:
 	frames+=1
@@ -96,7 +98,8 @@ while True:
 	if res == 120: #x
 		beta -= 1
 
-
-
+end  = time.time()
+elapsed = end-start
+print(str(frames/elapsed)+" FPS")
 cv2.destroyAllWindows()
 
