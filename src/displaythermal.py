@@ -29,7 +29,7 @@ while True:
 	#next job, split on , stick the data in an array
 	data = np.fromstring(recv, dtype=float, count=-1, sep=',') #get the data
 	#print(data)
-	heatmap = np.zeros((24,32,3), np.uint8) #create the blank image to work from
+	heatmap = np.zeros((24,32,1), np.uint8) #create the blank image to work from
 	#add to the image
 	index = 0
 	if len(data) == 768: #Check we have good data!
@@ -39,12 +39,7 @@ while True:
 				#print(val)
 				if math.isnan(val):
 					val = 0
-				#if val > 255:
-				#	val=255
-				#print(index)
-				#print(data)
-
-				heatmap[y,x] = (val,val,val)
+				heatmap[y,x] = (val)
 	
 				if(y == 12) and (x == 16):
 					temp = data[index]
