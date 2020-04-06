@@ -7,7 +7,7 @@ I have the MLX90640 wired to a Teensy 4.0 running the original sparkfun "Output 
 
 ![Screenshot](media/teensythermal.png)
 
-MLXHeatcam (Porcessing software) is a little slow because of use of filter(BLUR,7); which is CPU heavy I believe and I didn't really want to fire up an IDE to use the camera, so I rolled my own processing script in Python ad OpenCV.
+MLXHeatcam (Processing software) is a little slow because of use of filter(BLUR,7); which is CPU heavy I believe and I didn't really want to fire up an IDE to use the camera, so I rolled my own processing script in Python ad OpenCV.
 
 Serial Data is received by displaythermal.py (in src). This reads in the serial data, turns it into a numpy array and does some processing in OpenCV. Thermal data is cubic interpolated to give an impression of a higher resolution. The sensor is only 32 by 24 and is scaled to 320 by 240.
 
