@@ -15,6 +15,6 @@ readthermal.py just shows raw numpy data in the console, if that is what you nee
 
 ![Screenshot](media/thermal.gif)
 
-This should run on a RPi just fine (not tested yet) I intend to combine frames from the Picam as I did in onther project shortly!
+~~This should run on a RPi just fine (not tested yet)~~ (It does NOT run well on the RPi (You will see why shortly...), but updated code which does run is coming!) I intend to combine frames from the Picam as I did in onther project shortly!
 
 Note: Both scripts assume the Teesny enumerates as: /dev/ttyACM0  You may have to change this!
